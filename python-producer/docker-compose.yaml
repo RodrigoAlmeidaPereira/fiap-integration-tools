@@ -6,6 +6,8 @@ services:
     container_name: integration-tools-python-producer-ms
     networks:
       - integration-tools-network
+    environment:
+      - ENV=local
 
 networks:
   integration-tools-network:

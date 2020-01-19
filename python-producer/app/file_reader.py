@@ -1,5 +1,5 @@
 import csv
-from typing import  Iterable
+from typing import Iterable
 from models import RecipientMonthModel
 
 
