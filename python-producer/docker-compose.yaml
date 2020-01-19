@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  integration-tools-python-producer-ms:
+    build: .
+    image: integration-tools-python-producer:latest
+    container_name: integration-tools-python-producer-ms
+    networks:
+      - integration-tools-network
+
+networks:
+  integration-tools-network:
+    external:
+      name: integration-tools-network
+
