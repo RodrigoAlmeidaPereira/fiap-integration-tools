@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  integration-tools-java-consumer-ms:
+    build: .
+    image: integration-tools-java-consumer-ms:latest
+    container_name: integration-tools-java-consumer-ms
+    environment:
+      ENV: local
+    networks:
+      - integration-tools-network
+
+networks:
+  integration-tools-network:
+    external:
+      name: integration-tools-network
