@@ -1,16 +1,11 @@
 version: '3.5'
 services:
-  care-tracker-user-ms:
+  integration-tools-java-consumer-ms:
     build: .
     image: integration-tools-java-consumer-ms:latest
     container_name: integration-tools-java-consumer-ms
-    ports:
-      - "8080:8080"
-      - "7001:7000"
     environment:
-      PORT: 8080
       ENV: local
-      JAVA_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:7000
     networks:
       - integration-tools-network
 
