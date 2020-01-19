@@ -1,3 +1,4 @@
+import json
 from collections import namedtuple
 
 
@@ -33,3 +34,6 @@ class RecipientMonthModel:
     def __repr__(self):
         keys = ', '.join(f'{k}={v}' for k, v in vars(self).items())
         return f'{self.__class__.__name__}({keys})'
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
