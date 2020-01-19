@@ -1,10 +1,12 @@
 FROM python:3
 
-WORKDIR /usr/src/app
+LABEL maintainer="Rodrigo de Almeida Pereira <rodrigoalmeida.as@gmail.com>"
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY app /app
 
-CMD [ "python", "./your-daemon-or-script.py" ]
+WORKDIR app
+
+ENTRYPOINT python3 -u main.py
