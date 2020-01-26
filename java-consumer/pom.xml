@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.fiap.integrationtools</groupId>
 	<artifactId>java-consumer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>java-consumer</name>
 	<description>Java Consumer</description>
 
