@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: ${ENV}
   cloud:
     stream:
       default-binder: kafka
@@ -6,8 +8,6 @@ spring:
         binder:
           brokers:
             - localhost:9092
-          headers:
-            - type
       bindings:
         recipient_topic_count:
           binder: kafka
