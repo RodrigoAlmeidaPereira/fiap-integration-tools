@@ -5,7 +5,7 @@ services:
     image: integration-tools-java-consumer-ms:latest
     container_name: integration-tools-java-consumer-ms
     environment:
-      ENV: local
+      ENV: docker
     networks:
       - integration-tools-network
 
