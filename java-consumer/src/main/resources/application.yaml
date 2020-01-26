@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          headers:
+            - type
+      bindings:
+        recipient_topic_count:
+          binder: kafka
+          destination: recipient_topic
+          group: count
+          content-type: application/json
+        recipient_topic_uf:
+          binder: kafka
+          destination: recipient_topic
+          group: uf
+          content-type: application/json
+        recipient_topic_recipient:
+          binder: kafka
+          destination: recipient_topic
+          group: recipient
+          content-type: application/json

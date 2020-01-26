@@ -7,7 +7,7 @@ services:
     networks:
       - integration-tools-network
     environment:
-      - ENV=local
+      - ENV=docker
 
 networks:
   integration-tools-network:
