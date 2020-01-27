@@ -18,7 +18,7 @@ class DockerConfig(Config):
     def __init__(self):
         super().__init__()
         self.file_path = '201901_BolsaFamilia_Pagamentos.csv'
-        self.kafka_connection = 'kafka:9092'
+        self.kafka_connection = '0.0.0.0:9092'
 
 
 _config = LocalConfig()
