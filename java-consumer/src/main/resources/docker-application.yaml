@@ -4,4 +4,4 @@ spring:
       kafka:
         binder:
           brokers:
-            - kafka:9092
+            - kafka1:9092
