@@ -4,8 +4,9 @@ function down_app_container() {
     echo "Deleting latest running image"
     docker-compose rm -svf
 
-    echo "Clean old java build"
+    echo "Clean old java build and logs"
     rm -rf ./java-consumer/target
+    rm -f ./java-consumer/logs
 
     echo "Deleting kafka workspace"
     rm -rf ./kafka-server/zk-single-kafka-single

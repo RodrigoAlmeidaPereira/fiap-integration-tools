@@ -3,7 +3,7 @@ package com.fiap.integrationtools.consumer;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest''d''
+@SpringBootTest
 class JavaConsumerApplicationTests {
 
 	@Test
