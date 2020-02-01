@@ -1,3 +1,5 @@
 **/datalog
 **/zk-single-kafka-single
 **/.idea
+**/.vscode
+**/logs
