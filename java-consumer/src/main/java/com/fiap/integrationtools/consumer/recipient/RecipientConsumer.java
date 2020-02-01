@@ -27,7 +27,7 @@ public class RecipientConsumer {
     private void printRecipient(Recipient recipient){
         StringBuilder builder = new StringBuilder();
         builder.append("\n\n\n");
-        builder.append("************ Highest Installment Value ************\n");
+        builder.append("************ Beneficiário com a maior parcela ************\n");
         builder.append("NIS_Favorecido: ");
         builder.append(recipient.getRecipientNis());
         builder.append("\n");
