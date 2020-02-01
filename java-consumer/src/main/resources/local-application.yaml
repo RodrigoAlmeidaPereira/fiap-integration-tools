@@ -5,3 +5,17 @@ spring:
         binder:
           brokers:
             - localhost:9092
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  file: logs/application.log
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss} - %highlight(%-5level) - %cyan(%-40.40logger{40}) - %msg%n"
+    file: "%d{dd-MM-yyyy HH:mm:ss} [%thread] %-5level %logger: %msg%n"
+  level:
+    org.springframework: INFO
+    root: INFO
+    com.fiap.integrationstools.consumer: INFO

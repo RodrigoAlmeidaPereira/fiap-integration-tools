@@ -1,0 +1,78 @@
+version: '3.5'
+services:
+# Java -  Consumer
+  integration-tools-java-consumer-ms:
+    build: 
+      context: java-consumer/
+      dockerfile: Dockerfile
+    image: integration-tools-java-consumer-ms:latest
+    container_name: integration-tools-java-consumer-ms 
+    environment:
+      ENV: docker
+    depends_on:
+      - kafka1
+      - zoo1    
+    networks:
+      - integration-tools-network
+# Python Producer
+  integration-tools-python-producer-ms:
+    build: 
+      context: python-producer/
+      dockerfile: Dockerfile
+    image: integration-tools-python-producer:latest
+    container_name: integration-tools-python-producer-ms 
+    networks:
+      - integration-tools-network
+    environment:
+      ENV: docker
+    depends_on:
+      - kafka1  
+      - zoo1       
+  # Zookeeper
+  zoo1:
+    image: zookeeper:3.4.9
+    hostname: zoo1
+    ports:
+      - "2181:2181"
+    environment:
+       ZOO_MY_ID: 1
+       ZOO_PORT: 2181
+       ZOO_SERVERS: server.1=zoo1:2888:3888
+    volumes:
+      - ./kafka-server/zk-single-kafka-single/zoo1/data:/data
+      - ./kafka-server/zk-single-kafka-single/zoo1/datalog:/datalog
+    networks:
+      - integration-tools-network
+# Kafka
+  kafka1:
+    image: confluentinc/cp-kafka:5.3.1
+    hostname: kafka1
+    ports:
+      - "9092:9092"
+    expose:
+      - "9093"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka1:9093,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ZOOKEEPER_CONNECT: "zoo1:2181"
+      KAFKA_BROKER_ID: 1
+      KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - ./kafka-server/zk-single-kafka-single/kafka1/data:/var/lib/kafka/data
+    depends_on:
+      - zoo1
+    networks:
+      - integration-tools-network           
+  
+
+# Network
+networks:
+  integration-tools-network:
+    driver: bridge    
+    external:
+      name: integration-tools-network
+
+      
+
