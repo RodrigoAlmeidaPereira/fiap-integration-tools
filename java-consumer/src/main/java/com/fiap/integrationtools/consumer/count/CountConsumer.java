@@ -11,8 +11,20 @@ import org.springframework.messaging.handler.annotation.Payload;
 @EnableBinding(CountChannel.class)
 public class CountConsumer {
 
+    public static int count = 0;
+
     @StreamListener(target = CountChannel.INPUT)
     public void handle(@Payload Recipient message) {
-        log.info("Should count " + message);
+        CountConsumer.count ++;        
+        StringBuilder builder = new StringBuilder();
+        builder.append("\n\n\n");
+        builder.append("************ Consumption Count ************\n");
+        builder.append("Should count: ");
+        builder.append(CountConsumer.count);
+        builder.append("\n");       
+        builder.append("----------------------------------------------");
+        builder.append("\n\n\n");
+        log.info(builder.toString());
+
     }
 }
