@@ -1,2 +1,5 @@
-zk-single-kafka-single
-
+.idea/
+**/datalog
+**/zk-single-kafka-single
+**/java-consumer/target
+**/java-consumer/logs
