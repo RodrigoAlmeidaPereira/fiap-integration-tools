@@ -22,9 +22,9 @@ services:
     ports:
       - "9092:9092"
     expose:
-      - "9092"
+      - "9093"
     environment:
-      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka1:9093,OUTSIDE://kafka1:9092
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka1:9093,OUTSIDE://localhost:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: "zoo1:2181"
@@ -47,7 +47,7 @@ services:
     networks:
       - integration-tools-network
     environment:
-      ENV: local
+      ENV: docker
     depends_on:
       - kafka1  
       - zoo1              

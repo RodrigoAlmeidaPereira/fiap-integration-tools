@@ -25,3 +25,4 @@ class RecipientMonthProducer:
 
         self._producer.flush()
 
+        

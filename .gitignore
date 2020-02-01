@@ -1,5 +1,6 @@
 **/datalog
 **/zk-single-kafka-single
+**/java-consumer/logs
 .vscode
 
 HELP.md
