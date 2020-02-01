@@ -17,5 +17,5 @@ logging:
     file: "%d{dd-MM-yyyy HH:mm:ss} [%thread] %-5level %logger: %msg%n"
   level:
     org.springframework: INFO
-    root: ERROR
-    com.fiap.integrationstools.consumer: ERROR
+    root: INFO
+    com.fiap.integrationstools.consumer: INFO
