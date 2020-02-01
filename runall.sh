@@ -53,3 +53,5 @@ time (build_application)
 time (build_docker_image)
 time (up_app_container)
 time (up_app_python_container)
+
+
