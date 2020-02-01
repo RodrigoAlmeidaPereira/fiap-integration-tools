@@ -3,11 +3,6 @@ spring:
     active: ${ENV}
   cloud:
     stream:
-      default-binder: kafka
-      kafka:
-        binder:
-          brokers:
-            - localhost:9092
       bindings:
         recipient_topic_count:
           binder: kafka
