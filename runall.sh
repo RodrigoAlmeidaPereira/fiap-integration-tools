@@ -43,9 +43,14 @@ function up_app_container() {
 }
 
 function up_app_python_container() {
-    echo "Running python docker compose"
+    echo "Restart python python container"
     sleep 100
     docker-compose restart integration-tools-python-producer-ms
+}
+
+function collect_consumer_log() {
+    echo "Running python docker compose"
+    docker logs integration-tools-java-consumer-ms >>  consumer.log
 }
 
 time (down_app_container)
@@ -53,5 +58,5 @@ time (build_application)
 time (build_docker_image)
 time (up_app_container)
 time (up_app_python_container)
-
+time (collect_consumer_log)
 

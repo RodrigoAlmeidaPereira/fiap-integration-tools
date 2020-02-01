@@ -3,3 +3,4 @@
 **/.idea
 **/.vscode
 **/logs
+**/consumer.log
