@@ -45,3 +45,8 @@ Basta acessar a pasta raiz do projeto e executar o script:
 > bash runall.sh
 
 Em alguns minutos todo o ambiente estará em execução com a troca de mensagens entre o producer e os consumers.
+
+## Atividades Trello:
+Segue abaixo uma screenshot com as atividades necessárias para o desenvolvimento deste projeto:
+
+![alt image](https://github.com/RodrigoAlmeidaPereira/fiap-integration-tools/trello-in-progress.png)
