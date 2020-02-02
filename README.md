@@ -49,4 +49,4 @@ Em alguns minutos todo o ambiente estará em execução com a troca de mensagens
 ## Atividades Trello:
 Segue abaixo uma screenshot com as atividades necessárias para o desenvolvimento deste projeto:
 
-![alt image](https://github.com/RodrigoAlmeidaPereira/fiap-integration-tools/trello-in-progress.png)
+![alt image](https://github.com/RodrigoAlmeidaPereira/fiap-integration-tools/blob/master/trello-in-progress.png)
