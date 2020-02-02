@@ -194,6 +194,13 @@ UF: MA
 ----------------------------------------------
 ```
 
+## Links - Github e Trello:
+
+[Github](https://github.com/RodrigoAlmeidaPereira/fiap-integration-tools)
+
+[ Trello](https://trello.com/b/AgnjseSZ/fiap-integration-tools)
+
+
 ## Integrantes do Grupo:
 
 > Flavio Alves Ferreira da Silva - RM 333565
