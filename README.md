@@ -24,11 +24,11 @@ As libs utilizadas são:
 Para executar este programa, basta acessar a pasta 'producer-python' e executar o scrip 'run.sh':
 > bash run.sh
 
-Em alguns instantes o container com a o producer inicializará e as mensagens passarão a ser publicadas no tópico do cluster Kafka.
+Em alguns instantes o container com o producer inicializará e as mensagens passarão a ser publicadas no tópico do cluster Kafka.
 
 
 ## Consumer Java:
-Os consumers é implemntado em Java. Este aplicativo possui três consumers:
+Os consumers é implementado em Java. Este aplicativo possui três consumers:
 - Consumer para contar os registros recebidos;
 - Consumer para encontrar o beneficiário com maior parcela;
 - Consumer para calcular todos os valores por UF.
@@ -40,7 +40,7 @@ As libs e frameworks utilizados são:
 
 
 ## Executando todo o ecossistema:
-Para facilitar o deploy de todos os programas necessários (Kkafka-server, python-producer e java-consumer), foi desenvolvido um script que efetua todo o build das aplicações e, em seguida, executa todos os container necessários.
+Para facilitar o deploy de todos os programas necessários (kafka-server, python-producer e java-consumer), foi desenvolvido um script que efetua todo o build das aplicações e, em seguida, executa todos os container necessários.
 Basta acessar a pasta raiz do projeto e executar o script:
 > bash runall.sh
 
